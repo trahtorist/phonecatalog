@@ -3,7 +3,7 @@ version: "3.9"
 services:
   django:
     container_name: django
-    build: ./phonecatal
+    build: ./phonecatalog
     image: phonecatalog
     env_file:
       - .env
