@@ -1,0 +1,14 @@
+1: .gitignore
+*.sqlite3
+__pycash__/
+*.pyc
+static/
+media/
+db_data/
+.env
+.python-version
+venv
+.idea
+.vim
+.venv
+
