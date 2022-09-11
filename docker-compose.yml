@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  django:
+    container_name: django
+    build: ./phonecatal
+    image: phonecatalog
+    env_file:
+      - .env
+    command: sh /opt/backend/runserver.sh
+    volumes:
+      - ./phonecatalog:/opt/backend
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+      - wdb
+  db:
+    image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+ 
+  wdb:
+    image: docker.io/kozea/wdb
+    ports:
+      - "127.0.0.1:1984:1984"
+    init: true
+ 
+volumes:
+  postgres_data:
