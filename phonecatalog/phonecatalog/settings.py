@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gbwphone',
-
 ]
 
 MIDDLEWARE = [
@@ -80,7 +79,7 @@ DATABASES = {
 
        
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': os.environ["POSTGRES_DB"],
+        'NAME': os.environ["POSTGRES_DB"],
         'USER': os.environ["POSTGRES_USER"],
         'PASSWORD': os.environ["POSTGRES_PASSWORD"],
         'HOST': os.environ["DATABASE_HOST"],  # <-- IMPORTANT: same name as docker-compose service!
