@@ -8,4 +8,4 @@ class PhoneCatalogAdmin(admin.ModelAdmin):
     list_filter = ("manufacturer", "device_name", "active")
 
 
-admin.site.register(PhoneCatalog,PhoneCatalogAdmin)
+admin.site.register(PhoneCatalog, PhoneCatalogAdmin)
